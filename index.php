@@ -45,6 +45,7 @@ a:hover {
 }
 
 </style>
+    <?php include("ga.php"); ?>
 
 <body>
     <?php $url = "https://github.com/ericdum/mujiang.info/issues/1"?>
