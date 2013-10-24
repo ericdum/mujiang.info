@@ -476,5 +476,6 @@
             </dd>
 		</dl>
 	</div>
+    <?php include("../ga.php"); ?>
 </body>
 </html>
