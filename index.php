@@ -48,13 +48,19 @@ a:hover {
     <?php include("ga.php"); ?>
 
 <body>
-    <?php $url = "https://github.com/ericdum/mujiang.info/issues/1"?>
-    <?php $tit = "技术需要整理"?>
+    <?php $articles = array(
+            "技术需要整理" => "https://github.com/ericdum/mujiang.info/issues/1",
+            "浏览器阻塞探究" => "https://github.com/ericdum/mujiang.info/issues/2",
+        );
+    ?>
     <div>
         <p><a href="/">木匠手记</a>正在制作中
-        <p>请先访问Github Blog: <a href="<?php echo $url?>"><?php echo $tit?></a>
+        <p>请先访问Github Blog:
+        <?php foreach($articles as $title => $url ): ?>
+            <p><a href="<?php echo $url?>"><?php echo $title?></a>
+        <?php endforeach;?>
 
     <script>
-        document.body.className = "loaded";
-        setTimeout(function(){location.href = "<?php echo $url?>";}, 3000);
+        //document.body.className = "loaded";
+        //setTimeout(function(){location.href = "<?php echo $url?>";}, 3000);
     </script>
