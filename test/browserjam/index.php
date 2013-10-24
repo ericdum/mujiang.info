@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <script src="http://mujiang.info/delayload/1s.php"></script>
     <title>js卡渲染进程测试</title>
     <script defer>
         var time1 = (new Date()).getTime();
@@ -37,3 +36,4 @@
         <p>执行总时间：
 
         <script> document.write(((new Date()).getTime()-time1)/1000 + 's'); </script>
+        <?php include("../../ga.php"); ?>

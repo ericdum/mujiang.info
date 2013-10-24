@@ -13,3 +13,4 @@
         <p>按照标准标记为async会异步执行不妨碍解析</p>
         <p>执行总时间：
         <script> document.write(((new Date()).getTime()-time1)/1000 + 's'); </script>
+        <?php include("../../ga.php"); ?>
