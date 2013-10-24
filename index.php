@@ -11,13 +11,15 @@ body{
 div {
     position: relative;
     width: 400px;
-    margin: 20% auto;
+    margin: 20% auto 0;
     padding: 20px 0;
     -webkit-box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.40);
     -moz-box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.40);
     box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.40); 
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+    transition: margin .5s linear;
+    -webkit-transition: margin .5s linear;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -27,8 +29,8 @@ div:before {
     bottom: 0;
     height: 10px;
     background-color: #f6b580;
-    transition: width 3s linear 1s;
-    -webkit-transition: width 3s linear 1s;
+    transition: width 3s linear;
+    -webkit-transition: width 3s linear;
 }
 .loaded div:before {
     width: 100%;
@@ -61,6 +63,12 @@ a:hover {
         <?php endforeach;?>
 
     <script>
+        function resize(){
+            var div = document.getElementsByTagName('div')[0];
+            div.style.marginTop = (document.body.scrollHeight - div.offsetHeight)/2 + "px"
+        }
+        window.onresize = resize;
+        resize();
         //document.body.className = "loaded";
         //setTimeout(function(){location.href = "<?php echo $url?>";}, 3000);
     </script>
