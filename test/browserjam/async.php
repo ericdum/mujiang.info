@@ -10,7 +10,8 @@
             var intv = setInterval(function(){ timer.textContent = ((new Date()).getTime()-time)/1000 }, 50);
         </script>
         <script async onload="clearInterval(intv);" src="http://mujiang.info/delayload/10s.php"></script>
-        <p>按照标准标记为async会异步执行不妨碍解析</p>
+        <p>按照标准标记为async会异步执行不妨碍解析，所以这段文字会先显示出来，但同时还在加载js。</p>
         <p>执行总时间：
-        <script> document.write(((new Date()).getTime()-time1)/1000 + 's'); </script>
+        <script> document.write(((new Date()).getTime()-time)/1000 + 's'); </script>
+        <p>如果执行总时间的具体数字先显示出来了，说明async加载的js不仅不会阻塞解析，还不会阻塞其他js的执行。</p>
         <?php include("../../ga.php"); ?>
