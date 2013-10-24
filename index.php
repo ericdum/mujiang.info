@@ -65,7 +65,7 @@ a:hover {
     <script>
         function resize(){
             var div = document.getElementsByTagName('div')[0];
-            div.style.marginTop = (document.body.scrollHeight - div.offsetHeight)/2 + "px"
+            div.style.marginTop = (document.body.scrollHeight - div.offsetHeight)/2-20 + "px"
         }
         window.onresize = resize;
         resize();
