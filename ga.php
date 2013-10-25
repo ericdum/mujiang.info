@@ -7,3 +7,18 @@
     ga('create', 'UA-45052666-1', 'mujiang.info');
     ga('send', 'pageview');
 </script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45052666-2']);
+    _gaq.push(['_setDomainName', 'mujiang.info']);
+    _gaq.push(['_trackPageLoadTime']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>

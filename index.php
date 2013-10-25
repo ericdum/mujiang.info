@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<head>
 <meta charset="UTF-8" />
 <title>木匠手记</title>
 <style>
@@ -48,6 +49,7 @@ a:hover {
 
 </style>
     <?php include("ga.php"); ?>
+</head>
 
 <body>
     <?php $articles = array(
