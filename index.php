@@ -53,8 +53,9 @@ a:hover {
 
 <body>
     <?php $articles = array(
-            "技术需要整理" => "https://github.com/ericdum/mujiang.info/issues/1",
+            "小功能的优化——图片轮播" => "https://github.com/ericdum/mujiang.info/issues/3",
             "浏览器阻塞探究" => "https://github.com/ericdum/mujiang.info/issues/2",
+            "技术需要整理" => "https://github.com/ericdum/mujiang.info/issues/1",
         );
     ?>
     <div>
