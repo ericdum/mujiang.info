@@ -47,6 +47,14 @@ a:hover {
     color: #501714;
 }
 
+#beian {
+    font-size: 12px;
+    color: #888;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 </style>
     <?php include("ga.php"); ?>
 </head>
@@ -64,6 +72,7 @@ a:hover {
         <?php foreach($articles as $title => $url ): ?>
             <p><a href="<?php echo $url?>"><?php echo $title?></a>
         <?php endforeach;?>
+    </div>
 
     <script>
         function resize(){
@@ -75,3 +84,4 @@ a:hover {
         //document.body.className = "loaded";
         //setTimeout(function(){location.href = "<?php echo $url?>";}, 3000);
     </script>
+        <a id="beian" href="http://www.miitbeian.gov.cn/">沪ICP备13012399号</a>
