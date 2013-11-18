@@ -60,17 +60,21 @@ a:hover {
 </head>
 
 <body>
-    <?php $articles = array(
-            "小功能的优化——图片轮播" => "https://github.com/ericdum/mujiang.info/issues/3",
-            "浏览器阻塞探究" => "https://github.com/ericdum/mujiang.info/issues/2",
-            "技术需要整理" => "https://github.com/ericdum/mujiang.info/issues/1",
+    <?php 
+        $url = "https://github.com/ericdum/mujiang.info/issues/";
+        $articles = array(
+            "png8的透明通道（上）",
+            "小功能的优化——图片轮播",
+            "浏览器阻塞探究",
+            "技术需要整理",
         );
+        $total = count($articles);
     ?>
     <div>
         <p><a href="/">木匠手记</a>正在制作中
         <p>请先访问Github Blog:
-        <?php foreach($articles as $title => $url ): ?>
-            <p><a href="<?php echo $url?>"><?php echo $title?></a>
+        <?php foreach($articles as $i => $title ): ?>
+            <p><a href="<?php echo $url?><?php echo $total-$i?>/"><?php echo $title?></a>
         <?php endforeach;?>
     </div>
 
