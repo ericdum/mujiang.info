@@ -8,4 +8,4 @@ mujiang.info
 
 ````sql
 
-select * from pre_forum_post where dateline > 1346516000 into outfile '/var/www/bbs.xd.com/discuzx/config/db/pre_forum_post3' fields terminated by ',' enclosed by '"' lines terminated by '\r\n'
+select * from table where dateline > 1346516000 into outfile 'path_to_file' fields terminated by ',' enclosed by '"' lines terminated by '\r\n'
