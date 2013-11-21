@@ -5,7 +5,7 @@ mujiang.info
 
 
 临时记录一条导出数据的sql
-
+http://dev.mysql.com/doc/refman/5.1/en/load-data.html
 ````sql
 
 select * from table where dateline > 1346516000 into outfile 'path_to_file' fields terminated by ',' enclosed by '"' lines terminated by '\r\n'
