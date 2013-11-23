@@ -63,6 +63,7 @@ a:hover {
     <?php 
         $url = "https://github.com/ericdum/mujiang.info/issues/";
         $articles = array(
+            "踩到一个MySQL的坑——错误的索引",
             "png8的透明通道（上）",
             "小功能的优化——图片轮播",
             "浏览器阻塞探究",
