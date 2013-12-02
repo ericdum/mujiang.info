@@ -68,6 +68,7 @@ a:hover {
             "小功能的优化——图片轮播",
             "浏览器阻塞探究",
             "技术需要整理",
+            "npm的package.json中文文档",
         );
         $total = count($articles);
     ?>
