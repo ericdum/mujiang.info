@@ -1,1 +1,3 @@
 User-agent: *
+Allow: /*
+Allow: /translation/npmjs/files/package.json.html
