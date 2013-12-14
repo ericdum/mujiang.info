@@ -63,6 +63,7 @@ a:hover {
     <?php 
         $url = "https://github.com/ericdum/mujiang.info/issues/";
         $articles = array(
+            "看AngularJS文档需要注意的一些关键点",
             "npm的package.json中文文档",
             "踩到一个MySQL的坑——错误的索引",
             "png8的透明通道（上）",
