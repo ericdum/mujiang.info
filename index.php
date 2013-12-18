@@ -72,9 +72,23 @@ a:hover {
             "技术需要整理",
         );
         $total = count($articles);
+
+        $title = "木匠手记";
+        $domain = implode('.', array_slice(explode('.', $_SERVER['HTTP_HOST']), -2, 2));
+        switch( $domain ){
+            case "qqyj.org":
+                $title = "奇巧淫技研究院";
+                break;
+            case "deepui.com":
+                $title = "DeepUI";
+                break;
+            case "webengineer.cn":
+                $title = "web工程师";
+                break;
+        }
     ?>
     <div>
-        <p><a href="/">木匠手记</a>正在制作中
+        <p><a href="/"><?=$title?></a>正在制作中
         <p>请先访问Github Blog:
         <?php foreach($articles as $i => $title ): ?>
             <p><a href="<?php echo $url?><?php echo $total-$i?>/"><?php echo $title?></a>
