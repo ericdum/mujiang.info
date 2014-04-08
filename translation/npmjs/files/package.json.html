@@ -16,29 +16,6 @@
 
             <p>本文档中描述的很多行为都受<code><a href="https://npmjs.org/doc/misc/npm-config.html">npm-config(7)</a></code>的影响。</p>
 
-            <h2 id="DEFAULT-VALUES">DEFAULT VALUES</h2>
-
-            <p>npm会根据包内容设置一些默认值。</p>
-
-            <ul>
-                <li>
-                    <p><code>&quot;scripts&quot;: {&quot;start&quot;: &quot;node server.js&quot;}</code></p>
-                    <p>如果包的根目录有<code>server.js</code>文件，npm会默认将<code>start</code>命令设置为<code>node server.js</code>。</p>
-                </li>
-                <li>
-                    <p><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-waf clean || true; node-waf configure build&quot;}</code></p>
-                    <p>如果包的根目录有<code>wscript</code>文件，npm会默认将<code>preinstall</code>命令用node-waf进行编译。</p>
-                </li>
-                <li>
-                    <p><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-gyp rebuild&quot;}</code></p>
-                    <p>如果包的根目录有<code>binding.gyp</code>文件，npm会默认将<code>preinstall</code>命令用node-gyp进行编译。</p>
-                </li>
-                <li>
-                    <p><code>&quot;contributors&quot;: [...]</code></p>
-                    <p>If there is an <code>AUTHORS</code>文件，npm会默认逐行按<code>Name &lt;email&gt; (url)</code>格式处理，邮箱和url是可选的。<code>#</code>号和空格开头的行会被忽略。</p>
-                </li>
-            </ul>
-
             <h2 id="name">name</h2>
 
             <p>在package.json中<em>最</em>重要的就是name和version字段。他们都是必须的，如果没有就无法install。name和version一起组成的标识在假设中是唯一的。改变包应该同时改变version。</p>
@@ -492,6 +469,29 @@ if (foo) {
 <p>任何配置都可以被重写，但当然可能只有“tag”和“registry”与发布的意图有关。</p>
 
 <p>参见<a href="https://npmjs.org/doc/misc/npm-config.html">npm-config(7)</a>有可以被重写的列表。</p>
+
+            <h2 id="DEFAULT-VALUES">DEFAULT VALUES</h2>
+
+            <p>npm会根据包内容设置一些默认值。</p>
+
+            <ul>
+                <li>
+                    <p><code>&quot;scripts&quot;: {&quot;start&quot;: &quot;node server.js&quot;}</code></p>
+                    <p>如果包的根目录有<code>server.js</code>文件，npm会默认将<code>start</code>命令设置为<code>node server.js</code>。</p>
+                </li>
+                <li>
+                    <p><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-waf clean || true; node-waf configure build&quot;}</code></p>
+                    <p>如果包的根目录有<code>wscript</code>文件，npm会默认将<code>preinstall</code>命令用node-waf进行编译。</p>
+                </li>
+                <li>
+                    <p><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-gyp rebuild&quot;}</code></p>
+                    <p>如果包的根目录有<code>binding.gyp</code>文件，npm会默认将<code>preinstall</code>命令用node-gyp进行编译。</p>
+                </li>
+                <li>
+                    <p><code>&quot;contributors&quot;: [...]</code></p>
+                    <p>如果有<code>AUTHORS</code>文件，npm会默认逐行按<code>Name &lt;email&gt; (url)</code>格式处理，邮箱和url是可选的。<code>#</code>号和空格开头的行会被忽略。</p>
+                </li>
+            </ul>
 
             <h2 id="SEE-ALSO">SEE ALSO</h2>
 
