@@ -2,7 +2,7 @@
 <html>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>js卡渲染进程测试</title>
-    <script defer>
+    <script>
         var time1 = (new Date()).getTime();
         while(((new Date()).getTime()-time1) < 3000);
     </script>

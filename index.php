@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <title>木匠手记</title>
+<meta name="keywords" content="blog, nodejs, js, 前端, 前端工程师, 前端博客, 开发, 码农, mysql, 架构, 集群, 框架, 木匠, 木酱" />
+<meta name="description" content="木匠手记这个木匠目前就职于阿里，专注nodejs开发。这里有一些在前端、后端、架构和边缘技术的一些经验和体会。包括angularjs, nodejs, php, mysql, mongodb, redis, puppet, haproxy...." />
 <style>
 body{
     font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
@@ -91,7 +93,7 @@ a:hover {
         <p><a href="/"><?=$title?></a>正在制作中
         <p>请先访问Github Blog:
         <?php foreach($articles as $i => $title ): ?>
-            <p><a href="<?php echo $url?><?php echo $total-$i?>/"><?php echo $title?></a>
+            <p><a href="<?php echo $url?><?php echo $total-$i?>/" title="<?php echo $title?>"><?php echo $title?></a>
         <?php endforeach;?>
     </div>
 
