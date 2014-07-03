@@ -9,3 +9,9 @@ http://dev.mysql.com/doc/refman/5.1/en/load-data.html
 ````sql
 
 select * from table where dateline > 1346516000 into outfile 'path_to_file' fields terminated by ',' enclosed by '"' lines terminated by '\r\n'
+
+
+First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
