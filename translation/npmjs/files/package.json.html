@@ -345,9 +345,9 @@ git+https://user@hostname/project/blah.git#commit-ish
 
 <p>在这种情况下，它最好把这些附属的项目列示在<code>devDependencies</code> hash中。</p>
 
-<p>这些东西会在<code>npm link</code>或者<code>npm install</code>的时候从根目录初始化，并可以被其他类似的npm配置参数管理。详见<a href="https://npmjs.org/doc/misc/npm-config.html">npm-config(7)</a>。</p>
+<p>这些东西会在根目录执行<code>npm link</code>或者<code>npm install</code>的时候初始化，并可以像其他npm配置参数一样管理。详见<a href="https://npmjs.org/doc/misc/npm-config.html">npm-config(7)</a>。</p>
 
-<p>构建步骤不是平台特性，比如编译CoffeeScript或者其他语言到Javascript，用<code>prepublish</code>脚本去实现并把他放在devDependency中。</p>
+<p>对于非特定平台的构建步骤，比如编译CoffeeScript或者其他语言到Javascript，用<code>prepublish</code>脚本去实现并把他放在devDependency中。</p>
 
 <p>比如：</p>
 
@@ -364,7 +364,25 @@ git+https://user@hostname/project/blah.git#commit-ish
 <span class="p">}</span>
 </pre></div>
 
-<p><code>prepublish</code>脚本会再publishing前运行，所以用户可以不用自己去require就能使用。在开发模式中（比如本地运行<code>npm install</code>）会运行这个脚本以便更好地测试。</p>
+<p><code>prepublish</code>脚本会在publishing前运行，这样用户就不用自己去require来编译就能使用。并且在开发模式中（比如本地运行<code>npm install</code>）会运行这个脚本以便更好地测试。</p>
+
+            <h2 id="peerDependencies">peerDependencies</h2>
+            <p>在一些场景中，如在一个host中不必须进行<code>require</code>时候，你想表现你的package与一个host工具或者库的兼容关键。这一般用来引用<em>插件</em>。尤其是你的模块可能要暴露一个特定的接口，并由host文档来预期和指定。</p>
+            <p>比如：</p>
+<pre><code>{
+  "name": "tea-latte",
+  "version": "1.3.5"
+  "peerDependencies": {
+    "tea": "2.x"
+  }
+}
+</code></pre>
+            <p>这能保证你的package可以只和tea的2.x版本一起初始化。<code>npm install tea-latte</code>可能会产生下面的依赖关系</p>
+<pre><code>â”œâ”€â”€ tea-latte@1.3.5
+â””â”€â”€ tea@2.2.0
+</code></pre>
+            <p>试图初始化另一个有会冲突的依赖的插件将导致一个错误。因此，确保你的插件的需求约束越弱越好，而不要去把它锁定到一个特定的版本。</p>
+            <p>假设这个host遵守semver规范，只改变这个package的主版本会打破你的插件。因此，如果你在package中用过每个1.x版本，就用"^1.0"或者"1.x"来表示。如果你依赖于功能介绍1.5.2，用">= 1.5.2 &lt 2"。</p>
 
             <h2 id="bundledDependencies">bundledDependencies</h2>
 
