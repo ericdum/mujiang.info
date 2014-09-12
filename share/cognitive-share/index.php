@@ -34,6 +34,7 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+    <?php include("../../ga.php"); ?>
 	</head>
 
 	<body>
@@ -46,7 +47,7 @@
 					<h2>透过认知心理学来看UI设计</h2>
           <br>
 					<p>
-          <small>Created by <a target="_blank" href="http://mujiang.info">木酱</a>/<a target="_blank" href="http://weibo.com">@欢乐木匠艾瑞克</a></small>
+          <small>Created by <a target="_blank" href="http://mujiang.info">木酱</a> / <a target="_blank" href="http://weibo.com">@欢乐木匠艾瑞克</a></small>
 					</p>
 				</section>
 

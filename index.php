@@ -92,6 +92,7 @@ a:hover {
     <div>
         <p><a href="/"><?=$title?></a>正在制作中
         <p>请先访问Github Blog:
+            <p><a href="/share/cognitive-share/" title="透过认知心理学来看UI设计">透过认知心理学来看UI设计</a>
         <?php foreach($articles as $i => $title ): ?>
             <p><a href="<?php echo $url?><?php echo $total-$i?>/" title="<?php echo $title?>"><?php echo $title?></a>
         <?php endforeach;?>
