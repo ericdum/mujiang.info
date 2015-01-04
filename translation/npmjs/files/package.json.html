@@ -257,7 +257,7 @@ maybe, someday.</p>
 
             <p>依赖是给一组包名指定版本范围的一个hash。这个版本范围是一个由一个或多个空格分隔的字符串。依赖还可以用tarball或者git URL。</p>
 
-<p><strong>请不要将测试或过渡性的依赖放在<code>dependencies</code>hash中。</strong>见下文的<code>devDependencies</code>。</p>
+<p><strong>请不要将测试或过渡性的依赖放在<code>dependencies</code>中。</strong>见下文的<code>devDependencies</code>。</p>
 
 <p>详见<a href="https://npmjs.org/doc/misc/semver.html">semver(7)</a>.</p>
 
@@ -341,13 +341,13 @@ git+https://user@hostname/project/blah.git#commit-ish
 
             <h2 id="devDependencies">devDependencies</h2>
 
-            <p>如果有人计划在他们的程序中下载并使用你的模块，那么他们可能不想或者不需要去下载并构建你使用的外部测试或者文档框架。</p>
+            <p>如果有人要用你的模块，但他们可能不需要你开发所使用的外部测试或者文档框架。</p>
 
-<p>在这种情况下，它最好把这些附属的项目列示在<code>devDependencies</code> hash中。</p>
+<p>在这种情况下，最好将这些附属的项目列在<code>devDependencies</code>中。</p>
 
 <p>这些东西会在根目录执行<code>npm link</code>或者<code>npm install</code>的时候初始化，并可以像其他npm配置参数一样管理。详见<a href="https://npmjs.org/doc/misc/npm-config.html">npm-config(7)</a>。</p>
 
-<p>对于非特定平台的构建步骤，比如编译CoffeeScript或者其他语言到Javascript，用<code>prepublish</code>脚本去实现并把他放在devDependency中。</p>
+<p>对于非特定平台的构建步骤，比如需要编译CoffeeScript，可以用<code>prepublish</code>脚本去实现，并把它依赖的包放在devDependency中。（译者注：<code>prepublish</code>定义了在执行<code>npm publish</code>的时候先行执行的脚本。详见<code>scripts</code>）</p>
 
 <p>比如：</p>
 
@@ -491,7 +491,7 @@ if (foo) {
 
             <h2 id="DEFAULT-VALUES">DEFAULT VALUES</h2>
 
-            <p>npm会根据包内容设置一些默认值。</p>
+            <p>npm会设置一些默认值。</p>
 
             <ul>
                 <li>
