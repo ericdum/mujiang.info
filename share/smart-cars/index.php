@@ -6,7 +6,7 @@
 
 		<title>车身上的那些黑科技</title>
 
-		<meta name="description" content="车身上那些黑科技">
+		<meta name="description" content="车身上的那些黑科技">
     <meta name="author" content="欢乐木酱艾瑞克 <formateric@gmail.com>">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,7 +44,7 @@
 			<div class="slides">
 				<section>
 					<h4>The Hei Ke Ji Of Che</h4>
-					<h2>现代汽车身上那些黑科技</h2>
+					<h2>车身上的那些黑科技</h2>
           <br>
 					<p>
           <small>Created by <a target="_blank" href="http://mujiang.info">木酱</a> / <a target="_blank" href="http://weibo.com">@欢乐木匠艾瑞克</a></small>
@@ -117,8 +117,17 @@
 
 				<section>
           <h2>黑科技小菜</h2>
-          <p>陡坡缓降</p>
-          <p>紧急刹车提示</p>
+          <div class="fragment">
+            <p>陡坡缓降</p>
+            <p>紧急刹车提示</p>
+            <p>侧风稳定系统</p>
+            <p>夜视辅助系统</p>
+            <p>注意力辅助系统</p>
+            <p>自动雨刷</p>
+            <p>踢脚开门</p>
+            <p>无钥匙进入</p>
+            <p>....</p>
+          </div>
 				</section>
 
 				<section>
