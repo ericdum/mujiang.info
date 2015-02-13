@@ -92,11 +92,19 @@
 				</section>
 
 				<section>
-          <h2>雷达、视频分析技术</h2>
-					<p class="fragment">车道偏离</p>
-					<p class="fragment">ACC自适应巡航</p>
-					<p class="fragment">盲区辅助</p>
-          <p class="fragment">主动防碰撞</p>
+          <section>
+            <h2>雷达、视频分析技术</h2>
+            <p class="fragment">车道偏离</p>
+            <p class="fragment">ACC自适应巡航</p>
+            <p class="fragment">盲区辅助</p>
+            <p class="fragment">主动防碰撞</p>
+          </section>
+          <section>
+            <embed src="http://player.youku.com/player.php/sid/XNTA0OTAxMTQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+            <aside class="notes">
+              0:35，超清按钮前面一点
+            </aside>
+          </section>
         </section>
 
 				<section>
